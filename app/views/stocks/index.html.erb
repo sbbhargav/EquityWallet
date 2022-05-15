@@ -1,0 +1,13 @@
+<h1>Stocks of a user</h1>
+
+
+<% @stocks.each do |stock| %>
+	
+		<h2><%= link_to stock.companyname, stock_path(stock)%></h2>
+		
+		<p><%= stock.stockprice %></p>
+
+	
+<% end %>
+
+<%= link_to 'Add Stock',new_stock_path%>
